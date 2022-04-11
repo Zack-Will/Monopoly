@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Monopoly.SelectCharacterController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1600.0">
+         <image>
+            <Image url="@imgs/selectBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="85.0" layoutY="61.0">
+         <image>
+            <Image url="@imgs/player1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="91.0" layoutY="252.0">
+         <image>
+            <Image url="@imgs/player2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="player3Icon" fitHeight="150.0" fitWidth="150.0" layoutX="91.0" layoutY="450.0" visible="false">
+         <image>
+            <Image url="@imgs/player3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="player4Icon" fitHeight="150.0" fitWidth="150.0" layoutX="92.0" layoutY="634.0" visible="false">
+         <image>
+            <Image url="@imgs/player4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="300.0" layoutX="240.0" layoutY="90.0">
+         <image>
+            <Image url="@imgs/p1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="300.0" layoutX="240.0" layoutY="275.0">
+         <image>
+            <Image url="@imgs/p2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="player3Name" fitHeight="120.0" fitWidth="300.0" layoutX="241.0" layoutY="460.0" visible="false">
+         <image>
+            <Image url="@imgs/p3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="player4Name" fitHeight="120.0" fitWidth="300.0" layoutX="241.0" layoutY="645.0" visible="false">
+         <image>
+            <Image url="@imgs/p4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="300.0" layoutX="550.0" layoutY="5.0">
+         <image>
+            <Image url="@imgs/NickName.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="player1TextField" layoutX="600.0" layoutY="120.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="29.0" />
+         </font></TextField>
+      <TextField fx:id="player2TextField" layoutX="600.0" layoutY="305.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="29.0" />
+         </font></TextField>
+      <TextField fx:id="player3TextField" layoutX="600.0" layoutY="490.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-radius: 100;" visible="false">
+         <font>
+            <Font size="29.0" />
+         </font></TextField>
+      <TextField fx:id="player4TextField" layoutX="600.0" layoutY="675.0" prefHeight="60.0" prefWidth="200.0" style="-fx-background-radius: 100;" visible="false">
+         <font>
+            <Font size="29.0" />
+         </font></TextField>
+      <Button fx:id="addPlayer" layoutX="946.0" layoutY="119.0" maxHeight="100.0" maxWidth="300.0" minHeight="100.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="100.0" prefWidth="300.0" style="-fx-background-radius: 100;" text="添加玩家">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="deletePlayer" layoutX="949.0" layoutY="369.0" mnemonicParsing="false" onAction="#clickDelete" prefHeight="100.0" prefWidth="300.0" style="-fx-background-radius: 100;" text="删除玩家">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Button>
+      <Button fx:id="startGame" layoutX="959.0" layoutY="627.0" mnemonicParsing="false" onAction="#clickStart" prefHeight="100.0" prefWidth="300.0" style="-fx-background-radius: 100;" text="开始游戏">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

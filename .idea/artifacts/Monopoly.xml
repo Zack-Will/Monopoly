@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="Monopoly">
+    <output-path>$PROJECT_DIR$/out/artifacts/Monopoly</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Monopoly.Main" />
+        <option name="description" value="An simple game." />
+        <option name="height" value="900" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="image" />
+        <option name="title" value="Monopoly" />
+        <option name="vendor" value="ZackWill" />
+        <option name="version" value="0.0.1" />
+        <option name="width" value="1600" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Monopoly.jar">
+        <element id="module-output" name="Monopoly" />
+      </element>
+    </root>
+  </artifact>
+</component>

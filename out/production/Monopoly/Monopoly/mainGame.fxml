@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="900.0" maxWidth="1600.0" minHeight="900.0" minWidth="1600.0" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Monopoly.MainGameController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1600.0">
+         <image>
+            <Image url="@imgs/gameBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bigIcon1" fitHeight="170.0" fitWidth="170.0" layoutX="1430.0" visible="false">
+         <image>
+            <Image url="@imgs/player1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bigIcon2" fitHeight="170.0" fitWidth="170.0" layoutX="1430.0" visible="false">
+         <image>
+            <Image url="@imgs/player2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bigIcon3" fitHeight="170.0" fitWidth="170.0" layoutX="1430.0" visible="false">
+         <image>
+            <Image url="@imgs/player3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bigIcon4" fitHeight="170.0" fitWidth="170.0" layoutX="1430.0" visible="false">
+         <image>
+            <Image url="@imgs/player4.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="180.0" layoutX="1430.0" stroke="TRANSPARENT" strokeType="INSIDE" width="10.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="1435.0" layoutY="170.0" stroke="TRANSPARENT" strokeType="INSIDE" width="165.0" />
+      <TextField fx:id="dateTextField" editable="false" layoutX="1250.0" layoutY="30.0" prefHeight="43.0" prefWidth="143.0" style="-fx-background-radius: 100;">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="rollDice" layoutX="1450.0" layoutY="750.0" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#rollDiceClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;" visible="false">
+         <font>
+            <Font size="42.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="buttonIcon" disable="true" fitHeight="100" fitWidth="100" style="-fx-background-radius: 100">
+               <image>
+                  <Image url="@imgs/dice.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="start" layoutX="1450.0" layoutY="750.0" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" onAction="#startButtonClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="42.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="startButton" fitHeight="100" fitWidth="100" style="-fx-background-radius: 100">
+               <image>
+                  <Image url="@imgs/startButton.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextArea fx:id="outPutTextArea" editable="false" layoutX="1253.0" layoutY="247.0" prefHeight="300.0" prefWidth="337.0" style="-fx-background-radius: 100;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="22.0" />
+         </font>
+      </TextArea>
+      <AnchorPane layoutX="5.0" layoutY="155.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/SouthKorea.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="305.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/Germany.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="455.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/electricity.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="605.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/China.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="755.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="135.0" layoutY="50.0">
+               <image>
+                  <Image url="@imgs/prison.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="205.0" layoutY="755.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/France.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="405.0" layoutY="755.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="50.0" layoutX="135.0">
+               <image>
+                  <Image url="@imgs/fate.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="605.0" layoutY="755.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/Brazil.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="805.0" layoutY="755.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/Argentina.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="1005.0" layoutY="755.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/parking.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1005.0" layoutY="605.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/Switzerland.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="1005.0" layoutY="455.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/Singapore.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1005.0" layoutY="305.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/water.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1005.0" layoutY="155.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/Canada.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="1005.0" layoutY="5.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/PoliceStation.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="805.0" layoutY="5.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/UnitedStates.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="605.0" layoutY="5.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="50.0" layoutX="135.0">
+               <image>
+                  <Image url="@imgs/chance.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="405.0" layoutY="5.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/Japan.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="205.0" layoutY="5.0" maxHeight="140.0" maxWidth="190.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="135.0" layoutY="45.0">
+               <image>
+                  <Image url="@imgs/UnitedKingdom.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="5.0" maxHeight="140.0" maxWidth="190.0" minHeight="140.0" minWidth="190.0" prefHeight="140.0" prefWidth="190.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="75.0" layoutY="-15.0">
+               <image>
+                  <Image url="@imgs/start.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow choke="0.1" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </AnchorPane>
+      <ImageView fx:id="smallIcon1" fitHeight="45.0" fitWidth="45.0" layoutX="25.0" layoutY="20.0" styleClass="fadeIn" visible="false">
+         <image>
+            <Image url="@imgs/smallIcon1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="smallIcon2" fitHeight="45.0" fitWidth="45.0" layoutX="90.0" layoutY="20.0" visible="false">
+         <image>
+            <Image url="@imgs/smallIcon2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="smallIcon3" fitHeight="45.0" fitWidth="45.0" layoutX="25.0" layoutY="80.0" visible="false">
+         <image>
+            <Image url="@imgs/smallIcon3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="smallIcon4" fitHeight="45.0" fitWidth="45.0" layoutX="90.0" layoutY="80.0" visible="false">
+         <image>
+            <Image url="@imgs/smallIcon4.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nameField" editable="false" layoutX="1250.0" layoutY="90.0" prefHeight="43.0" prefWidth="143.0" style="-fx-background-radius: 100;">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="moneyField" editable="false" layoutX="1250.0" layoutY="150.0" prefHeight="43.0" prefWidth="143.0" style="-fx-background-radius: 100;">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="choiceButtonY" disable="true" layoutX="1338.0" layoutY="572.0" mnemonicParsing="false" style="-fx-background-radius: 100;" text="是" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="choiceButtonN" disable="true" layoutX="1457.0" layoutY="571.0" mnemonicParsing="false" style="-fx-background-radius: 100;" text="否" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <ImageView fitHeight="400.0" fitWidth="700.0" layoutX="250.0" layoutY="260.0">
+         <image>
+            <Image url="@imgs/大富翁.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
